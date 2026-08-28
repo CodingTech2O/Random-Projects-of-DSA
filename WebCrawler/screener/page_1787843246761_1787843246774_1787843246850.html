@@ -1,0 +1,1994 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Screener Premium
+ - Screener
+  </title>
+  <!-- plausible -->
+  <script data-domain="screener.in" defer="" event-user="unregistered" src="https://plausible.screener.in/js/script.pageview-props.tagged-events.js">
+  </script>
+  <script>
+   window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments) }
+  </script>
+  <script data-site-id="5494427e1dc0" defer="" src="https://rybbit.screener.in/api/script.js">
+  </script>
+  <!-- FONT -->
+  <link href="https://cdn-static.screener.in/inter/inter.c622a5e75782.css" rel="stylesheet"/>
+  <link href="https://cdn-static.screener.in/fontello/css/fontello.1d1b3a0a264b.css?v=3" rel="stylesheet"/>
+  <!-- CSS -->
+  <link href="https://cdn-static.screener.in/css/normalize.a2444750a947.css" media="all" rel="stylesheet"/>
+  <link href="https://cdn-static.screener.in/css/skeleton.c6872bc14f71.css" media="all" rel="stylesheet"/>
+  <link href="https://cdn-static.screener.in/css/custom.c544852bd75a.css" media="all" rel="stylesheet"/>
+  <link href="https://cdn-static.screener.in/css/payment.25cd5ac63d13.css" rel="stylesheet"/>
+  <meta content="Mittal Analytics Private Limited" name="author"/>
+  <!-- PWA manifest -->
+  <meta content="#fff" media="(prefers-color-scheme: light)" name="theme-color"/>
+  <meta content="#222530" media="(prefers-color-scheme: dark)" name="theme-color"/>
+  <link href="/static/manifest.json" rel="manifest"/>
+  <!-- favicons -->
+  <link href="https://cdn-static.screener.in/favicon/apple-touch-icon.b6e5f24bf7d3.png" rel="apple-touch-icon" sizes="180x180"/>
+  <link href="https://cdn-static.screener.in/favicon/favicon-32x32.00205914303a.png" rel="icon" sizes="32x32" type="image/png"/>
+  <link href="https://cdn-static.screener.in/favicon/favicon-16x16.2b35594b2f33.png" rel="icon" sizes="16x16" type="image/png"/>
+  <link color="#8ED443" href="https://cdn-static.screener.in/favicon/safari-pinned-tab.adbe3ed3c5ad.svg" rel="mask-icon"/>
+  <meta content="#da532c" name="msapplication-TileColor"/>
+ </head>
+ <body class="light flex-column">
+  <nav class="u-full-width no-print">
+   <div id="mobile-search">
+    <div class="has-addon left-addon dropdown-typeahead">
+     <i class="addon icon-search">
+     </i>
+     <input aria-label="Search for a company" autocomplete="off" class="u-full-width" data-company-search="true" placeholder="Search for a company" spellcheck="false" type="search"/>
+    </div>
+   </div>
+   <ul class="bottom-menu-bar hide-from-tablet-landscape">
+    <li class="">
+     <a href="/">
+      <i class="icon-home">
+      </i>
+      <br/>
+      Home
+     </a>
+    </li>
+    <li class="">
+     <a href="/explore/">
+      <i class="icon-screens">
+      </i>
+      <br/>
+      Screens
+     </a>
+    </li>
+    <li>
+     <button class="round height-48 button-primary" onclick="MobileMenu.toggleSearch(this)" title="Search" type="button">
+      <i class="icon-search" style="font-size: 18px">
+      </i>
+     </button>
+    </li>
+    <li>
+     <button class="button-plain" onclick="Modal.showInModal('#nav-tools-menu')">
+      <i class="icon-tools">
+      </i>
+      <br/>
+      Tools
+     </button>
+    </li>
+    <li class="">
+     <a href="/register/?driver=top-nav-tools">
+      <i class="icon-user-plus">
+      </i>
+      <br/>
+      Login
+     </a>
+    </li>
+   </ul>
+   <div class="top-nav-holder">
+    <div class="container">
+     <div class="layer-holder top-navigation">
+      <div class="layer flex flex-space-between" style="align-items: center;
+              height: 50px">
+       <div class="flex" style="align-items: center">
+        <a class="logo-holder" href="/">
+         <img alt="Screener Logo" class="logo" src="https://cdn-static.screener.in/img/logo-black.f44abb4998d1.svg"/>
+        </a>
+        <div class="desktop-links" style="margin-left: 48px">
+         <a href="/">
+          Home
+         </a>
+         <a href="/explore/">
+          Screens
+         </a>
+         <div class="dropdown-menu">
+          <button class="button-plain" onclick="Utils.toggleDropdown(event)" type="button">
+           Tools
+           <i class="icon-down">
+           </i>
+          </button>
+          <ul class="dropdown-content flex-column tools-menu" id="nav-tools-menu" style="width: 350px">
+           <li>
+            <a class="flex flex-align-center flex-gap-16" href="/screen/new/">
+             <div class="bg-stripes square height-56">
+              <img alt="Create a stock screen" src="https://cdn-static.screener.in/icons/screens.e960a5daedf9.svg"/>
+             </div>
+             <div>
+              <div class="font-weight-500 font-size-14">
+               Create a stock screen
+              </div>
+              <div class="sub font-size-13">
+               Run queries on 10 years of financial data
+              </div>
+             </div>
+            </a>
+           </li>
+           <li class="flex flex-align-center no-hover" style="padding: 4px 0;">
+            <div class="button button-primary premium-indicator flex flex-align-center">
+             <img alt="Premium icon" src="https://cdn-static.screener.in/icons/crown.fb0d2413ee43.svg" style="margin-right: 8px"/>
+             <span>
+              Premium features
+             </span>
+            </div>
+            <hr class="flex-grow" style="padding: 0; margin: 0;"/>
+           </li>
+           <li>
+            <a class="flex flex-align-center flex-gap-16" href="/ai/">
+             <div class="bg-stripes square height-56">
+              <img alt="Screener AI" src="https://cdn-static.screener.in/icons/ai.970ef1d1cabb.svg"/>
+             </div>
+             <div>
+              <div class="font-weight-500 font-size-14">
+               Screener AI
+              </div>
+              <div class="sub font-size-13">
+               Extract valuable insights from hundreds of company documents.
+              </div>
+             </div>
+            </a>
+           </li>
+           <li>
+            <a class="flex flex-align-center flex-gap-16" href="/hs/">
+             <div class="bg-stripes square height-56">
+              <img alt="Commodity Prices" src="https://cdn-static.screener.in/icons/export.d623f0029933.svg"/>
+             </div>
+             <div>
+              <div class="font-weight-500 font-size-14">
+               Commodity Prices
+              </div>
+              <div class="sub font-size-13">
+               Analyze price trends for 10,000+ commodities over the past 10 years.
+              </div>
+             </div>
+            </a>
+           </li>
+           <li>
+            <a class="flex flex-align-center flex-gap-16" href="/people/">
+             <div class="bg-stripes square height-56">
+              <img alt="Search shareholders by name" src="https://cdn-static.screener.in/icons/shares.10acc20cb936.svg"/>
+             </div>
+             <div>
+              <div class="font-weight-500 font-size-14">
+               Search shareholders
+              </div>
+              <div class="sub font-size-13">
+               Find all companies where a person owns more than 1% of shares.
+              </div>
+             </div>
+            </a>
+           </li>
+           <li>
+            <a class="flex flex-align-center flex-gap-16" href="/announcements/">
+             <div class="bg-stripes square height-56">
+              <img alt="Loudspeaker" src="https://cdn-static.screener.in/icons/loudspeaker.88769927f6eb.svg"/>
+             </div>
+             <div>
+              <div class="font-weight-500 font-size-14">
+               Company Announcements
+              </div>
+              <div class="sub font-size-13">
+               Stay updated. Search, filter and set alerts for the newest disclosures and developments.
+              </div>
+             </div>
+            </a>
+           </li>
+           <li style="padding: 16px;">
+            <a class="button button-primary text-align-center" href="/premium/?driver=top-nav-tools" style="color: var(--white);
+                          padding: 10px 24px">
+             Upgrade to premium
+            </a>
+           </li>
+          </ul>
+         </div>
+        </div>
+       </div>
+       <div class="show-from-tablet-landscape flex flex-gap-16" style="justify-content: flex-end;
+                flex: 1 1 400px">
+        <div class="search" id="desktop-search">
+         <div class="has-addon left-addon dropdown-typeahead">
+          <i class="addon icon-search">
+          </i>
+          <input aria-label="Search for a company" autocomplete="off" class="u-full-width" data-company-search="true" placeholder="Search for a company" spellcheck="false" type="search"/>
+         </div>
+        </div>
+        <div class="flex flex-gap-8" style="margin: 4px">
+         <a class="button account" href="/login/?driver=top-nav-tools">
+          <i class="icon-user-line blue-icon">
+          </i>
+          Login
+         </a>
+         <a class="button account button-secondary" href="/register/?driver=top-nav-tools">
+          Get free account
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </nav>
+  <main class="flex-grow container">
+   <div class="breadcrumb hidden-if-empty">
+   </div>
+   <div>
+    <div class="text-align-center margin-top-56 margin-bottom-80">
+     <h1 class="font-weight-400">
+      <strong>
+       Save hours spent in getting data
+      </strong>
+     </h1>
+     <p class="ink-700 larger font-weight-500">
+      Get unlimited access to all the features
+     </p>
+    </div>
+    <div class="flex flex-column flex-align-center">
+     <table class="show-from-tablet line-height-1 no-style font-size-16 collapsed" style="max-width: 1000px">
+      <thead>
+       <tr class="bg-none">
+        <th>
+        </th>
+        <th class="bg-base ink-900 border-top border-left border-top-left-radius padding-32-24 box-sizing padding-top-48 vertical-align-top text-align-left" style="width: 340px">
+         <div class="flex flex-column gap-32">
+          <div class="flex gap-24 flex-align-center">
+           <img alt="Hobby Investor" src="https://cdn-static.screener.in/icons/free-plan.4200c1d76458.svg"/>
+           <div class="flex flex-column gap-8">
+            <div class="font-size-20 font-weight-500">
+             Hobby Investor
+            </div>
+            <div>
+             <span class="font-size-24 sub">
+              ₹
+             </span>
+             <span class="font-size-24 font-weight-500">
+              0
+             </span>
+             <span class="ink-600 smaller">
+              / year
+             </span>
+            </div>
+           </div>
+          </div>
+          <div>
+           <a class="button button-large u-full-width" href="/register/">
+            Create a free account
+           </a>
+          </div>
+         </div>
+        </th>
+        <th class="bg-primary ink-900 border-top border-left border-right border-top-right-radius padding-32-24 box-sizing padding-top-48 vertical-align-top text-align-left" style="width: 340px;
+                 position: relative">
+         <div style="position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translate(-50%, -50%)">
+          <span class="padding-8-16 border-radius-6 bg-gold nowrap">
+           Premium Plan
+          </span>
+         </div>
+         <div class="flex flex-column gap-32">
+          <div class="flex gap-24 flex-align-center">
+           <img alt="Active Investor" src="https://cdn-static.screener.in/icons/premium-plan.c42e12e0f0a6.svg"/>
+           <div class="flex flex-column gap-8">
+            <div class="font-size-20 font-weight-500">
+             Active Investor
+            </div>
+            <div>
+             <span class="font-size-24">
+              ₹
+             </span>
+             <span class="font-size-24 font-weight-500">
+              4,999
+             </span>
+             <span class="smaller">
+              / year
+             </span>
+            </div>
+           </div>
+          </div>
+          <a class="button button-large u-full-width button-secondary" href="/login/">
+           Login to Buy
+          </a>
+         </div>
+        </th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr class="bg-none">
+        <td class="font-size-18 strong padding-20 border-left border-top border-top-left-radius">
+         Company Analysis
+        </td>
+        <td class="bg-base border-left">
+        </td>
+        <td class="bg-primary border-left border-right">
+        </td>
+       </tr>
+       <tr class="bg-none">
+        <td class="font-size-16 line-height-12 padding-20 border-left">
+         <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=ai" data-title="Screener AI" data-url="/payment/feature/ai/" onclick="Modal.openInModal(event)" type="button">
+          <span class="dashed-link">
+           Screener AI
+          </span>
+          <i class="icon-info">
+          </i>
+         </button>
+        </td>
+        <td class="bg-base text-align-center border-left">
+         <img alt="Not Available" src="https://cdn-static.screener.in/icons/icon-cancel.4c61229dcda4.svg" style="width: 24px"/>
+        </td>
+        <td class="bg-primary text-align-center border-left border-right">
+         <span class="font-weight-500">
+          Free Credits worth ₹500
+         </span>
+        </td>
+       </tr>
+       <tr class="bg-none">
+        <td class="font-size-16 line-height-12 padding-20 border-left">
+         <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=follow-companies" data-title="Follow Companies" data-url="/payment/feature/follow-companies/" onclick="Modal.openInModal(event)" type="button">
+          <span class="dashed-link">
+           Follow Companies
+          </span>
+          <i class="icon-info">
+          </i>
+         </button>
+        </td>
+        <td class="bg-base text-align-center border-left">
+         <span class="font-weight-500">
+          Up to 50 Companies
+         </span>
+        </td>
+        <td class="bg-primary text-align-center border-left border-right">
+         <span class="font-weight-500">
+          Unlimited
+          <sup>
+           *
+          </sup>
+         </span>
+        </td>
+       </tr>
+       <tr class="bg-none">
+        <td class="font-size-16 line-height-12 padding-20 border-left">
+         <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=excel-automation" data-title="Excel Automation" data-url="/payment/feature/excel-automation/" onclick="Modal.openInModal(event)" type="button">
+          <span class="dashed-link">
+           Excel Automation
+          </span>
+          <i class="icon-info">
+          </i>
+         </button>
+        </td>
+        <td class="bg-base text-align-center border-left">
+         <img alt="Available" src="https://cdn-static.screener.in/icons/icon-ok.c5dcd2a2f9a4.svg" style="width: 24px"/>
+        </td>
+        <td class="bg-primary text-align-center border-left border-right">
+         <img alt="Available" src="https://cdn-static.screener.in/icons/icon-ok.c5dcd2a2f9a4.svg" style="width: 24px"/>
+        </td>
+       </tr>
+       <tr class="bg-none">
+        <td class="font-size-16 line-height-12 padding-20 border-left">
+         <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=detailed-peer-comparison" data-title="Detailed Peer Comparison" data-url="/payment/feature/detailed-peer-comparison/" onclick="Modal.openInModal(event)" type="button">
+          <span class="dashed-link">
+           Detailed Peer Comparison
+          </span>
+          <i class="icon-info">
+          </i>
+         </button>
+        </td>
+        <td class="bg-base text-align-center border-left">
+         <img alt="Not Available" src="https://cdn-static.screener.in/icons/icon-cancel.4c61229dcda4.svg" style="width: 24px"/>
+        </td>
+        <td class="bg-primary text-align-center border-left border-right">
+         <img alt="Available" src="https://cdn-static.screener.in/icons/icon-ok.c5dcd2a2f9a4.svg" style="width: 24px"/>
+        </td>
+       </tr>
+       <tr class="bg-none">
+        <td class="font-size-16 line-height-12 padding-20 border-left">
+         <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=fundamental-charts" data-title="Fundamental Charts" data-url="/payment/feature/fundamental-charts/" onclick="Modal.openInModal(event)" type="button">
+          <span class="dashed-link">
+           Fundamental Charts
+          </span>
+          <i class="icon-info">
+          </i>
+         </button>
+        </td>
+        <td class="bg-base text-align-center border-left">
+         <img alt="Available" src="https://cdn-static.screener.in/icons/icon-ok.c5dcd2a2f9a4.svg" style="width: 24px"/>
+        </td>
+        <td class="bg-primary text-align-center border-left border-right">
+         <img alt="Available" src="https://cdn-static.screener.in/icons/icon-ok.c5dcd2a2f9a4.svg" style="width: 24px"/>
+        </td>
+       </tr>
+       <tr class="bg-none">
+        <td class="font-size-16 line-height-12 padding-20 border-left">
+         <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=stock-alerts" data-title="Stock Alerts" data-url="/payment/feature/stock-alerts/" onclick="Modal.openInModal(event)" type="button">
+          <span class="dashed-link">
+           Stock Alerts
+          </span>
+          <i class="icon-info">
+          </i>
+         </button>
+        </td>
+        <td class="bg-base text-align-center border-left">
+         <span class="font-weight-500">
+          10
+         </span>
+        </td>
+        <td class="bg-primary text-align-center border-left border-right">
+         <span class="font-weight-500">
+          800
+         </span>
+        </td>
+       </tr>
+       <tr class="bg-none">
+        <td class="font-size-16 line-height-12 padding-20 border-left">
+         <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=key-insights" data-title="Key Insights" data-url="/payment/feature/key-insights/" onclick="Modal.openInModal(event)" type="button">
+          <span class="dashed-link">
+           Key Insights
+          </span>
+          <i class="icon-info">
+          </i>
+         </button>
+        </td>
+        <td class="bg-base text-align-center border-left">
+         <span class="font-weight-500">
+          20 per month
+         </span>
+        </td>
+        <td class="bg-primary text-align-center border-left border-right">
+         <span class="font-weight-500">
+          Unlimited
+          <sup>
+           *
+          </sup>
+         </span>
+        </td>
+       </tr>
+       <tr class="bg-none">
+        <td class="font-size-16 line-height-12 padding-20 border-left">
+         <span class="ink-700">
+          Insights table
+         </span>
+        </td>
+        <td class="bg-base text-align-center border-left">
+         <span class="font-weight-500">
+          5 per month
+         </span>
+        </td>
+        <td class="bg-primary text-align-center border-left border-right">
+         <span class="font-weight-500">
+          Unlimited
+          <sup>
+           *
+          </sup>
+         </span>
+        </td>
+       </tr>
+       <tr class="bg-none">
+        <td class="font-size-16 line-height-12 padding-20 border-left">
+         <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=concall-notes" data-title="Concall Notes" data-url="/payment/feature/concall-notes/" onclick="Modal.openInModal(event)" type="button">
+          <span class="dashed-link">
+           Concall Notes
+          </span>
+          <i class="icon-info">
+          </i>
+         </button>
+        </td>
+        <td class="bg-base text-align-center border-left">
+         <span class="font-weight-500">
+          10 per month
+         </span>
+        </td>
+        <td class="bg-primary text-align-center border-left border-right">
+         <span class="font-weight-500">
+          Unlimited
+          <sup>
+           *
+          </sup>
+         </span>
+        </td>
+       </tr>
+       <tr class="bg-none">
+        <td class="font-size-16 line-height-12 padding-20 border-left">
+         <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=segment-results" data-title="Segment Results" data-url="/payment/feature/segment-results/" onclick="Modal.openInModal(event)" type="button">
+          <span class="dashed-link">
+           Segment Results
+          </span>
+          <i class="icon-info">
+          </i>
+         </button>
+        </td>
+        <td class="bg-base text-align-center border-left">
+         <img alt="Not Available" src="https://cdn-static.screener.in/icons/icon-cancel.4c61229dcda4.svg" style="width: 24px"/>
+        </td>
+        <td class="bg-primary text-align-center border-left border-right">
+         <img alt="Available" src="https://cdn-static.screener.in/icons/icon-ok.c5dcd2a2f9a4.svg" style="width: 24px"/>
+        </td>
+       </tr>
+       <tr class="bg-none">
+        <td class="font-size-16 line-height-12 padding-20 border-left">
+         <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=quick-ratios" data-title="Quick Ratios" data-url="/payment/feature/quick-ratios/" onclick="Modal.openInModal(event)" type="button">
+          <span class="dashed-link">
+           Quick Ratios
+          </span>
+          <i class="icon-info">
+          </i>
+         </button>
+        </td>
+        <td class="bg-base text-align-center border-left">
+         <span class="font-weight-500">
+          18
+         </span>
+        </td>
+        <td class="bg-primary text-align-center border-left border-right">
+         <span class="font-weight-500">
+          60
+         </span>
+        </td>
+       </tr>
+       <tr class="bg-none">
+        <td class="font-size-18 strong padding-20 border-left padding-top-48">
+         Screening
+        </td>
+        <td class="bg-base border-left">
+        </td>
+        <td class="bg-primary border-left border-right">
+        </td>
+       </tr>
+       <tr class="bg-none">
+        <td class="font-size-16 line-height-12 padding-20 border-left">
+         <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=stock-screens" data-title="Stock Screens" data-url="/payment/feature/stock-screens/" onclick="Modal.openInModal(event)" type="button">
+          <span class="dashed-link">
+           Stock Screens
+          </span>
+          <i class="icon-info">
+          </i>
+         </button>
+        </td>
+        <td class="bg-base text-align-center border-left">
+         <img alt="Available" src="https://cdn-static.screener.in/icons/icon-ok.c5dcd2a2f9a4.svg" style="width: 24px"/>
+        </td>
+        <td class="bg-primary text-align-center border-left border-right">
+         <img alt="Available" src="https://cdn-static.screener.in/icons/icon-ok.c5dcd2a2f9a4.svg" style="width: 24px"/>
+        </td>
+       </tr>
+       <tr class="bg-none">
+        <td class="font-size-16 line-height-12 padding-20 border-left">
+         <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=custom-ratios" data-title="Custom Ratios" data-url="/payment/feature/custom-ratios/" onclick="Modal.openInModal(event)" type="button">
+          <span class="dashed-link">
+           Custom Ratios
+          </span>
+          <i class="icon-info">
+          </i>
+         </button>
+        </td>
+        <td class="bg-base text-align-center border-left">
+         <img alt="Available" src="https://cdn-static.screener.in/icons/icon-ok.c5dcd2a2f9a4.svg" style="width: 24px"/>
+        </td>
+        <td class="bg-primary text-align-center border-left border-right">
+         <img alt="Available" src="https://cdn-static.screener.in/icons/icon-ok.c5dcd2a2f9a4.svg" style="width: 24px"/>
+        </td>
+       </tr>
+       <tr class="bg-none">
+        <td class="font-size-16 line-height-12 padding-20 border-left">
+         <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=screen-alerts" data-title="Screen Alerts" data-url="/payment/feature/screen-alerts/" onclick="Modal.openInModal(event)" type="button">
+          <span class="dashed-link">
+           Screen Alerts
+          </span>
+          <i class="icon-info">
+          </i>
+         </button>
+        </td>
+        <td class="bg-base text-align-center border-left">
+         <span class="font-weight-500">
+          2
+         </span>
+        </td>
+        <td class="bg-primary text-align-center border-left border-right">
+         <span class="font-weight-500">
+          75
+         </span>
+        </td>
+       </tr>
+       <tr class="bg-none">
+        <td class="font-size-16 line-height-12 padding-20 border-left">
+         <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=comparison-columns" data-title="Comparison Columns" data-url="/payment/feature/comparison-columns/" onclick="Modal.openInModal(event)" type="button">
+          <span class="dashed-link">
+           Comparison Columns
+          </span>
+          <i class="icon-info">
+          </i>
+         </button>
+        </td>
+        <td class="bg-base text-align-center border-left">
+         <span class="font-weight-500">
+          15
+         </span>
+        </td>
+        <td class="bg-primary text-align-center border-left border-right">
+         <span class="font-weight-500">
+          55
+         </span>
+        </td>
+       </tr>
+       <tr class="bg-none">
+        <td class="font-size-16 line-height-12 padding-20 border-left">
+         <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=download-screen-results" data-title="Download Results" data-url="/payment/feature/download-screen-results/" onclick="Modal.openInModal(event)" type="button">
+          <span class="dashed-link">
+           Download Results
+          </span>
+          <i class="icon-info">
+          </i>
+         </button>
+        </td>
+        <td class="bg-base text-align-center border-left">
+         <img alt="Not Available" src="https://cdn-static.screener.in/icons/icon-cancel.4c61229dcda4.svg" style="width: 24px"/>
+        </td>
+        <td class="bg-primary text-align-center border-left border-right">
+         <img alt="Available" src="https://cdn-static.screener.in/icons/icon-ok.c5dcd2a2f9a4.svg" style="width: 24px"/>
+        </td>
+       </tr>
+       <tr class="bg-none">
+        <td class="font-size-16 line-height-12 padding-20 border-left">
+         <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=industry-filter" data-title="Industry Filter" data-url="/payment/feature/industry-filter/" onclick="Modal.openInModal(event)" type="button">
+          <span class="dashed-link">
+           Industry Filter
+          </span>
+          <i class="icon-info">
+          </i>
+         </button>
+        </td>
+        <td class="bg-base text-align-center border-left">
+         <img alt="Not Available" src="https://cdn-static.screener.in/icons/icon-cancel.4c61229dcda4.svg" style="width: 24px"/>
+        </td>
+        <td class="bg-primary text-align-center border-left border-right">
+         <img alt="Available" src="https://cdn-static.screener.in/icons/icon-ok.c5dcd2a2f9a4.svg" style="width: 24px"/>
+        </td>
+       </tr>
+       <tr class="bg-none">
+        <td class="font-size-18 strong padding-20 border-left padding-top-48">
+         Others
+        </td>
+        <td class="bg-base border-left">
+        </td>
+        <td class="bg-primary border-left border-right">
+        </td>
+       </tr>
+       <tr class="bg-none">
+        <td class="font-size-16 line-height-12 padding-20 border-left">
+         <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=search-everywhere" data-title="Search Everywhere" data-url="/payment/feature/search-everywhere/" onclick="Modal.openInModal(event)" type="button">
+          <span class="dashed-link">
+           Search Everywhere
+          </span>
+          <i class="icon-info">
+          </i>
+         </button>
+        </td>
+        <td class="bg-base text-align-center border-left">
+         <img alt="Available" src="https://cdn-static.screener.in/icons/icon-ok.c5dcd2a2f9a4.svg" style="width: 24px"/>
+        </td>
+        <td class="bg-primary text-align-center border-left border-right">
+         <img alt="Available" src="https://cdn-static.screener.in/icons/icon-ok.c5dcd2a2f9a4.svg" style="width: 24px"/>
+        </td>
+       </tr>
+       <tr class="bg-none">
+        <td class="font-size-16 line-height-12 padding-20 border-left">
+         <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=phrase-alerts" data-title="Phrase Alerts" data-url="/payment/feature/phrase-alerts/" onclick="Modal.openInModal(event)" type="button">
+          <span class="dashed-link">
+           Phrase Alerts
+          </span>
+          <i class="icon-info">
+          </i>
+         </button>
+        </td>
+        <td class="bg-base text-align-center border-left">
+         <span class="font-weight-500">
+          2
+         </span>
+        </td>
+        <td class="bg-primary text-align-center border-left border-right">
+         <span class="font-weight-500">
+          50
+         </span>
+        </td>
+       </tr>
+       <tr class="bg-none">
+        <td class="font-size-16 line-height-12 padding-20 border-left">
+         <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=follow-people" data-title="Follow People" data-url="/payment/feature/follow-people/" onclick="Modal.openInModal(event)" type="button">
+          <span class="dashed-link">
+           Follow People
+          </span>
+          <i class="icon-info">
+          </i>
+         </button>
+        </td>
+        <td class="bg-base text-align-center border-left">
+         <span class="font-weight-500">
+          2
+         </span>
+        </td>
+        <td class="bg-primary text-align-center border-left border-right">
+         <span class="font-weight-500">
+          300
+         </span>
+        </td>
+       </tr>
+       <tr class="bg-none">
+        <td class="font-size-16 line-height-12 padding-20 border-left">
+         <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=one-click-filters" data-title="One-Click Filters" data-url="/payment/feature/one-click-filters/" onclick="Modal.openInModal(event)" type="button">
+          <span class="dashed-link">
+           One-Click Filters
+          </span>
+          <i class="icon-info">
+          </i>
+         </button>
+        </td>
+        <td class="bg-base text-align-center border-left">
+         <img alt="Not Available" src="https://cdn-static.screener.in/icons/icon-cancel.4c61229dcda4.svg" style="width: 24px"/>
+        </td>
+        <td class="bg-primary text-align-center border-left border-right">
+         <img alt="Available" src="https://cdn-static.screener.in/icons/icon-ok.c5dcd2a2f9a4.svg" style="width: 24px"/>
+        </td>
+       </tr>
+       <tr class="bg-none">
+        <td class="font-size-16 line-height-12 padding-20 border-left">
+         <span class="ink-700">
+          Emails Delivery
+         </span>
+        </td>
+        <td class="bg-base text-align-center border-left">
+         <span class="font-weight-500">
+          Delayed
+         </span>
+        </td>
+        <td class="bg-primary text-align-center border-left border-right">
+         <span class="font-weight-500">
+          Prioritised
+         </span>
+        </td>
+       </tr>
+       <tr class="bg-none">
+        <td class="font-size-16 line-height-12 padding-20 border-left">
+         <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=multiple-watchlists" data-title="Multiple Watchlists" data-url="/payment/feature/multiple-watchlists/" onclick="Modal.openInModal(event)" type="button">
+          <span class="dashed-link">
+           Multiple Watchlists
+          </span>
+          <i class="icon-info">
+          </i>
+         </button>
+        </td>
+        <td class="bg-base text-align-center border-left">
+         <img alt="Not Available" src="https://cdn-static.screener.in/icons/icon-cancel.4c61229dcda4.svg" style="width: 24px"/>
+        </td>
+        <td class="bg-primary text-align-center border-left border-right">
+         <img alt="Available" src="https://cdn-static.screener.in/icons/icon-ok.c5dcd2a2f9a4.svg" style="width: 24px"/>
+        </td>
+       </tr>
+       <tr class="bg-none">
+        <td class="font-size-16 line-height-12 padding-20 border-left">
+         <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=trade-data" data-title="Trends of 10,000+ products" data-url="/payment/feature/trade-data/" onclick="Modal.openInModal(event)" type="button">
+          <span class="dashed-link">
+           Trends of 10,000+ products
+          </span>
+          <i class="icon-info">
+          </i>
+         </button>
+        </td>
+        <td class="bg-base text-align-center border-left">
+         <img alt="Not Available" src="https://cdn-static.screener.in/icons/icon-cancel.4c61229dcda4.svg" style="width: 24px"/>
+        </td>
+        <td class="bg-primary text-align-center border-left border-right">
+         <img alt="Available" src="https://cdn-static.screener.in/icons/icon-ok.c5dcd2a2f9a4.svg" style="width: 24px"/>
+        </td>
+       </tr>
+       <tr class="bg-none">
+        <td class="font-size-16 line-height-12 padding-20 border-left border-bottom-left-radius border-bottom">
+         <span class="ink-700">
+          Priority Support
+         </span>
+        </td>
+        <td class="bg-base text-align-center border-left border-bottom">
+         <img alt="Not Available" src="https://cdn-static.screener.in/icons/icon-cancel.4c61229dcda4.svg" style="width: 24px"/>
+        </td>
+        <td class="bg-primary text-align-center border-left border-right border-bottom-right-radius border-bottom">
+         <img alt="Available" src="https://cdn-static.screener.in/icons/icon-ok.c5dcd2a2f9a4.svg" style="width: 24px"/>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <!-- mobile -->
+     <div class="hide-from-tablet u-full-width">
+      <table class="bg-base padding-20 bordered-table no-style">
+       <tr>
+        <td>
+         <div class="flex flex-column gap-32">
+          <div class="flex gap-24 flex-align-center">
+           <img alt="Active Investor" src="https://cdn-static.screener.in/icons/premium-plan.c42e12e0f0a6.svg"/>
+           <div class="flex flex-column gap-8">
+            <div class="font-size-20 font-weight-500">
+             Active Investor
+            </div>
+            <div>
+             <span class="font-size-24">
+              ₹
+             </span>
+             <span class="font-size-24 font-weight-500">
+              4,999
+             </span>
+             <span class="smaller">
+              / year
+             </span>
+            </div>
+           </div>
+          </div>
+          <a class="button button-large font-size-14 u-full-width button-primary" href="/login/">
+           Login to Buy
+          </a>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="font-size-14 strong padding-top-medium padding-bottom-small">
+         Company Analysis
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=ai" data-title="Screener AI" data-url="/payment/feature/ai/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Screener AI
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <span class="font-weight-500">
+           Free Credits worth ₹500
+          </span>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=follow-companies" data-title="Follow Companies" data-url="/payment/feature/follow-companies/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Follow Companies
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <span class="font-weight-500">
+           Unlimited
+           <sup>
+            *
+           </sup>
+          </span>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=excel-automation" data-title="Excel Automation" data-url="/payment/feature/excel-automation/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Excel Automation
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <img alt="Available" src="https://cdn-static.screener.in/icons/icon-ok.c5dcd2a2f9a4.svg" style="width: 20px"/>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=detailed-peer-comparison" data-title="Detailed Peer Comparison" data-url="/payment/feature/detailed-peer-comparison/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Detailed Peer Comparison
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <img alt="Available" src="https://cdn-static.screener.in/icons/icon-ok.c5dcd2a2f9a4.svg" style="width: 20px"/>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=fundamental-charts" data-title="Fundamental Charts" data-url="/payment/feature/fundamental-charts/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Fundamental Charts
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <img alt="Available" src="https://cdn-static.screener.in/icons/icon-ok.c5dcd2a2f9a4.svg" style="width: 20px"/>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=stock-alerts" data-title="Stock Alerts" data-url="/payment/feature/stock-alerts/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Stock Alerts
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <span class="font-weight-500">
+           800
+          </span>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=key-insights" data-title="Key Insights" data-url="/payment/feature/key-insights/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Key Insights
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <span class="font-weight-500">
+           Unlimited
+           <sup>
+            *
+           </sup>
+          </span>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <span class="ink-700">
+           Insights table
+          </span>
+         </div>
+         <div class="text-align-right flex">
+          <span class="font-weight-500">
+           Unlimited
+           <sup>
+            *
+           </sup>
+          </span>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=concall-notes" data-title="Concall Notes" data-url="/payment/feature/concall-notes/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Concall Notes
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <span class="font-weight-500">
+           Unlimited
+           <sup>
+            *
+           </sup>
+          </span>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=segment-results" data-title="Segment Results" data-url="/payment/feature/segment-results/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Segment Results
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <img alt="Available" src="https://cdn-static.screener.in/icons/icon-ok.c5dcd2a2f9a4.svg" style="width: 20px"/>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=quick-ratios" data-title="Quick Ratios" data-url="/payment/feature/quick-ratios/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Quick Ratios
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <span class="font-weight-500">
+           60
+          </span>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="font-size-14 strong padding-top-medium padding-bottom-small">
+         Screening
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=stock-screens" data-title="Stock Screens" data-url="/payment/feature/stock-screens/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Stock Screens
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <img alt="Available" src="https://cdn-static.screener.in/icons/icon-ok.c5dcd2a2f9a4.svg" style="width: 20px"/>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=custom-ratios" data-title="Custom Ratios" data-url="/payment/feature/custom-ratios/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Custom Ratios
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <img alt="Available" src="https://cdn-static.screener.in/icons/icon-ok.c5dcd2a2f9a4.svg" style="width: 20px"/>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=screen-alerts" data-title="Screen Alerts" data-url="/payment/feature/screen-alerts/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Screen Alerts
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <span class="font-weight-500">
+           75
+          </span>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=comparison-columns" data-title="Comparison Columns" data-url="/payment/feature/comparison-columns/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Comparison Columns
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <span class="font-weight-500">
+           55
+          </span>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=download-screen-results" data-title="Download Results" data-url="/payment/feature/download-screen-results/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Download Results
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <img alt="Available" src="https://cdn-static.screener.in/icons/icon-ok.c5dcd2a2f9a4.svg" style="width: 20px"/>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=industry-filter" data-title="Industry Filter" data-url="/payment/feature/industry-filter/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Industry Filter
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <img alt="Available" src="https://cdn-static.screener.in/icons/icon-ok.c5dcd2a2f9a4.svg" style="width: 20px"/>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="font-size-14 strong padding-top-medium padding-bottom-small">
+         Others
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=search-everywhere" data-title="Search Everywhere" data-url="/payment/feature/search-everywhere/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Search Everywhere
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <img alt="Available" src="https://cdn-static.screener.in/icons/icon-ok.c5dcd2a2f9a4.svg" style="width: 20px"/>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=phrase-alerts" data-title="Phrase Alerts" data-url="/payment/feature/phrase-alerts/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Phrase Alerts
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <span class="font-weight-500">
+           50
+          </span>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=follow-people" data-title="Follow People" data-url="/payment/feature/follow-people/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Follow People
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <span class="font-weight-500">
+           300
+          </span>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=one-click-filters" data-title="One-Click Filters" data-url="/payment/feature/one-click-filters/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            One-Click Filters
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <img alt="Available" src="https://cdn-static.screener.in/icons/icon-ok.c5dcd2a2f9a4.svg" style="width: 20px"/>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <span class="ink-700">
+           Emails Delivery
+          </span>
+         </div>
+         <div class="text-align-right flex">
+          <span class="font-weight-500">
+           Prioritised
+          </span>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=multiple-watchlists" data-title="Multiple Watchlists" data-url="/payment/feature/multiple-watchlists/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Multiple Watchlists
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <img alt="Available" src="https://cdn-static.screener.in/icons/icon-ok.c5dcd2a2f9a4.svg" style="width: 20px"/>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=trade-data" data-title="Trends of 10,000+ products" data-url="/payment/feature/trade-data/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Trends of 10,000+ products
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <img alt="Available" src="https://cdn-static.screener.in/icons/icon-ok.c5dcd2a2f9a4.svg" style="width: 20px"/>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small">
+         <div>
+          <span class="ink-700">
+           Priority Support
+          </span>
+         </div>
+         <div class="text-align-right flex">
+          <img alt="Available" src="https://cdn-static.screener.in/icons/icon-ok.c5dcd2a2f9a4.svg" style="width: 20px"/>
+         </div>
+        </td>
+       </tr>
+      </table>
+      <table class="bg-base padding-20 bordered-table no-style margin-top-56">
+       <tr>
+        <td>
+         <div class="flex flex-column gap-32">
+          <div class="flex gap-24 flex-align-center">
+           <img alt="Hobby Investor" src="https://cdn-static.screener.in/icons/free-plan.4200c1d76458.svg"/>
+           <div class="flex flex-column gap-8">
+            <div class="font-size-20 font-weight-500">
+             Hobby Investor
+            </div>
+            <div>
+             <span class="font-size-24 sub">
+              ₹
+             </span>
+             <span class="font-size-24 font-weight-500">
+              0
+             </span>
+             <span class="ink-600 smaller">
+              / year
+             </span>
+            </div>
+           </div>
+          </div>
+          <div>
+           <a class="button button-large u-full-width" href="/register/">
+            Create a free account
+           </a>
+          </div>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="font-size-14 strong padding-top-medium padding-bottom-small">
+         Company Analysis
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=ai" data-title="Screener AI" data-url="/payment/feature/ai/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Screener AI
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <img alt="Not Available" src="https://cdn-static.screener.in/icons/icon-cancel.4c61229dcda4.svg" style="width: 20px"/>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=follow-companies" data-title="Follow Companies" data-url="/payment/feature/follow-companies/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Follow Companies
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <span class="font-weight-500">
+           Up to 50 Companies
+          </span>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=excel-automation" data-title="Excel Automation" data-url="/payment/feature/excel-automation/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Excel Automation
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <img alt="Available" src="https://cdn-static.screener.in/icons/icon-ok.c5dcd2a2f9a4.svg" style="width: 20px"/>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=detailed-peer-comparison" data-title="Detailed Peer Comparison" data-url="/payment/feature/detailed-peer-comparison/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Detailed Peer Comparison
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <img alt="Not Available" src="https://cdn-static.screener.in/icons/icon-cancel.4c61229dcda4.svg" style="width: 20px"/>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=fundamental-charts" data-title="Fundamental Charts" data-url="/payment/feature/fundamental-charts/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Fundamental Charts
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <img alt="Available" src="https://cdn-static.screener.in/icons/icon-ok.c5dcd2a2f9a4.svg" style="width: 20px"/>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=stock-alerts" data-title="Stock Alerts" data-url="/payment/feature/stock-alerts/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Stock Alerts
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <span class="font-weight-500">
+           10
+          </span>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=key-insights" data-title="Key Insights" data-url="/payment/feature/key-insights/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Key Insights
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <span class="font-weight-500">
+           20 per month
+          </span>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <span class="ink-700">
+           Insights table
+          </span>
+         </div>
+         <div class="text-align-right flex">
+          <span class="font-weight-500">
+           5 per month
+          </span>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=concall-notes" data-title="Concall Notes" data-url="/payment/feature/concall-notes/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Concall Notes
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <span class="font-weight-500">
+           10 per month
+          </span>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=segment-results" data-title="Segment Results" data-url="/payment/feature/segment-results/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Segment Results
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <img alt="Not Available" src="https://cdn-static.screener.in/icons/icon-cancel.4c61229dcda4.svg" style="width: 20px"/>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=quick-ratios" data-title="Quick Ratios" data-url="/payment/feature/quick-ratios/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Quick Ratios
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <span class="font-weight-500">
+           18
+          </span>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="font-size-14 strong padding-top-medium padding-bottom-small">
+         Screening
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=stock-screens" data-title="Stock Screens" data-url="/payment/feature/stock-screens/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Stock Screens
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <img alt="Available" src="https://cdn-static.screener.in/icons/icon-ok.c5dcd2a2f9a4.svg" style="width: 20px"/>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=custom-ratios" data-title="Custom Ratios" data-url="/payment/feature/custom-ratios/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Custom Ratios
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <img alt="Available" src="https://cdn-static.screener.in/icons/icon-ok.c5dcd2a2f9a4.svg" style="width: 20px"/>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=screen-alerts" data-title="Screen Alerts" data-url="/payment/feature/screen-alerts/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Screen Alerts
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <span class="font-weight-500">
+           2
+          </span>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=comparison-columns" data-title="Comparison Columns" data-url="/payment/feature/comparison-columns/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Comparison Columns
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <span class="font-weight-500">
+           15
+          </span>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=download-screen-results" data-title="Download Results" data-url="/payment/feature/download-screen-results/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Download Results
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <img alt="Not Available" src="https://cdn-static.screener.in/icons/icon-cancel.4c61229dcda4.svg" style="width: 20px"/>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=industry-filter" data-title="Industry Filter" data-url="/payment/feature/industry-filter/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Industry Filter
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <img alt="Not Available" src="https://cdn-static.screener.in/icons/icon-cancel.4c61229dcda4.svg" style="width: 20px"/>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="font-size-14 strong padding-top-medium padding-bottom-small">
+         Others
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=search-everywhere" data-title="Search Everywhere" data-url="/payment/feature/search-everywhere/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Search Everywhere
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <img alt="Available" src="https://cdn-static.screener.in/icons/icon-ok.c5dcd2a2f9a4.svg" style="width: 20px"/>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=phrase-alerts" data-title="Phrase Alerts" data-url="/payment/feature/phrase-alerts/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Phrase Alerts
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <span class="font-weight-500">
+           2
+          </span>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=follow-people" data-title="Follow People" data-url="/payment/feature/follow-people/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Follow People
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <span class="font-weight-500">
+           2
+          </span>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=one-click-filters" data-title="One-Click Filters" data-url="/payment/feature/one-click-filters/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            One-Click Filters
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <img alt="Not Available" src="https://cdn-static.screener.in/icons/icon-cancel.4c61229dcda4.svg" style="width: 20px"/>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <span class="ink-700">
+           Emails Delivery
+          </span>
+         </div>
+         <div class="text-align-right flex">
+          <span class="font-weight-500">
+           Delayed
+          </span>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=multiple-watchlists" data-title="Multiple Watchlists" data-url="/payment/feature/multiple-watchlists/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Multiple Watchlists
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <img alt="Not Available" src="https://cdn-static.screener.in/icons/icon-cancel.4c61229dcda4.svg" style="width: 20px"/>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small padding-bottom-small border-bottom">
+         <div>
+          <button class="a ink-700 plausible-event-name=Premium+Feature+Preview plausible-event-feature=trade-data" data-title="Trends of 10,000+ products" data-url="/payment/feature/trade-data/" onclick="Modal.openInModal(event)" type="button">
+           <span class="dashed-link">
+            Trends of 10,000+ products
+           </span>
+           <i class="icon-info">
+           </i>
+          </button>
+         </div>
+         <div class="text-align-right flex">
+          <img alt="Not Available" src="https://cdn-static.screener.in/icons/icon-cancel.4c61229dcda4.svg" style="width: 20px"/>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="flex flex-space-between flex-align-center padding-top-small">
+         <div>
+          <span class="ink-700">
+           Priority Support
+          </span>
+         </div>
+         <div class="text-align-right flex">
+          <img alt="Not Available" src="https://cdn-static.screener.in/icons/icon-cancel.4c61229dcda4.svg" style="width: 20px"/>
+         </div>
+        </td>
+       </tr>
+      </table>
+     </div>
+    </div>
+   </div>
+   <p class="ink-700 text-align-center font-size-14" style="margin: 48px auto 208px;
+            max-width: 550px">
+    <strong class="ink-900">
+     *Unlimited access:
+    </strong>
+    Though there are internal limits on few resource extensive features such as emails and columns, these limits are set pretty high.
+   </p>
+   <div class="bg-base details-area">
+    <div class="faq-area flex flex-column-mobile flex-space-around flex-gap-32">
+     <div style="max-width: 280px;">
+      <div>
+       <img alt="FAQs" src="https://cdn-static.screener.in/icons/faq.110ac203549d.svg"/>
+      </div>
+      <h2>
+       Frequently asked questions
+      </h2>
+      <p class="sub">
+       Questions that are commonly asked
+      </p>
+     </div>
+     <div style="max-width: 600px;">
+      <div class="question-answer">
+       <p class="question">
+        How is premium useful?
+       </p>
+       <p class="answer">
+        Premium subscription provides the complete package. It enables you to add more columns and companies. The trade data and segment results are helpful in quick analysis.
+       </p>
+      </div>
+      <div class="question-answer">
+       <p class="question">
+        Is price inclusive of GST? How can I provide my GST details?
+       </p>
+       <p class="answer">
+        Yes, price is inclusive of GST. You will get the option to provide your GST details after payment.
+       </p>
+      </div>
+      <div class="question-answer">
+       <p class="question">
+        Can I cancel the purchase and get a refund?
+       </p>
+       <p class="answer">
+        Yes, we provide a full refund if requested within 48 hours.
+       </p>
+      </div>
+      <div class="question-answer">
+       <p class="question">
+        What happens if I don't renew the subscription?
+       </p>
+       <p class="answer">
+        Your account remains as it is after expiry. Though you might not be able to add new alerts or companies, the existing ones will keep functioning.
+       </p>
+      </div>
+      <div class="question">
+       <p>
+        Have more questions?
+        <a href="/support/">
+         Contact us
+        </a>
+       </p>
+      </div>
+     </div>
+    </div>
+    <div class="flex-row support-area flex-space-around">
+     <div style="max-width: 440px;">
+      <h2>
+       Your contribution keeps us going
+      </h2>
+      <p class="sub">
+       It enables us to add new features and scale our team. All our efforts go in creating tools for better stock research.
+      </p>
+      <div class="bg-base flex flex-align-start" style="padding: 20px;
+                    margin-top: 48px">
+       <img alt="Work in progress" src="https://cdn-static.screener.in/icons/wip.2e13a51a8359.svg" style="margin-right: 20px"/>
+       <div>
+        <p class="larger no-margin">
+         We're currently working on
+        </p>
+        <p class="sub" style="margin-bottom: 0;">
+         Concalls
+         <br/>
+         More ratios for screening
+         <br/>
+         Qualitative data
+        </p>
+       </div>
+      </div>
+     </div>
+     <div class="flex flex-column text-align-center flex-gap-48">
+      <img alt="Support us" src="https://cdn-static.screener.in/icons/give.ef85cd9e0706.svg"/>
+      <a class="button bg-gold button-large border-0" href="/login/">
+       Login to upgrade
+      </a>
+     </div>
+    </div>
+   </div>
+  </main>
+  <footer id="large-footer">
+   <div class="flex-row flex-space-between flex-column-tablet container no-print">
+    <div class="hide-from-tablet" style="margin-bottom: 16px;">
+     <img alt="Screener Logo" class="logo" src="https://cdn-static.screener.in/img/logo-black.f44abb4998d1.svg" style="max-width: 120px"/>
+    </div>
+    <div class="show-from-tablet" style="padding: 0 64px 0 0;">
+     <img alt="Screener Logo" class="logo" src="https://cdn-static.screener.in/img/logo-black.f44abb4998d1.svg" style="max-width: 120px"/>
+     <p class="font-size-19" style="font-weight: 500;">
+      Stock analysis and screening tool
+     </p>
+     <p class="sub">
+      Mittal Analytics Private Ltd © 2009-2026
+      <br/>
+      Made with
+      <i class="icon-heart red">
+      </i>
+      in India.
+     </p>
+     <p class="sub font-size-13">
+      Data provided by C-MOTS Internet Technologies Pvt Ltd
+     </p>
+     <p class="font-size-13 sub">
+      <a class="underline-link" href="/guides/terms/">
+       Terms
+      </a>
+      &amp;
+      <a class="underline-link" href="/guides/privacy/">
+       Privacy
+      </a>
+      .
+     </p>
+    </div>
+    <div class="flex flex-end flex-space-between flex-grow" style="max-width: 600px">
+     <div class="flex-grow">
+      <div class="title">
+       Product
+      </div>
+      <ul class="items">
+       <li>
+        <a href="/premium/?driver=footer">
+         Premium
+        </a>
+       </li>
+       <li>
+        <a href="/docs/changelog/">
+         What's new?
+        </a>
+       </li>
+       <li>
+        <a href="https://bit.ly/learnscreener">
+         Learn
+        </a>
+       </li>
+       <li>
+        <button class="a2hs button-secondary button-small">
+         <i class="icon-flash">
+         </i>
+         Install
+        </button>
+       </li>
+      </ul>
+     </div>
+     <div class="flex-grow">
+      <div class="title">
+       Team
+      </div>
+      <ul class="items">
+       <li>
+        <a href="/guides/about-us/">
+         About us
+        </a>
+       </li>
+       <li>
+        <a href="/support/">
+         Support
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div class="flex-grow">
+      <div class="title">
+       Theme
+      </div>
+      <ul class="items">
+       <li>
+        <button aria-label="Set light theme" class="button-plain" onclick="SetTheme('light')">
+         <i class="icon-sun">
+         </i>
+         Light
+        </button>
+       </li>
+       <li>
+        <button aria-label="Set dark theme" class="button-plain" onclick="SetTheme('dark')">
+         <i class="icon-moon">
+         </i>
+         Dark
+        </button>
+       </li>
+       <li>
+        <button aria-label="Set auto theme" class="button-plain" onclick="SetTheme('auto')">
+         <i class="icon-monitor">
+         </i>
+         Auto
+        </button>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="hide-from-tablet">
+     <hr/>
+     <p class="sub">
+      Mittal Analytics Private Ltd © 2009-2026
+     </p>
+     <p class="sub">
+      Data provided by C-MOTS Internet Technologies Pvt Ltd
+     </p>
+     <p class="sub">
+      <a class="underline-link" href="/guides/terms/">
+       Terms
+      </a>
+      &amp;
+      <a class="underline-link" href="/guides/privacy/">
+       Privacy
+      </a>
+      .
+     </p>
+    </div>
+   </div>
+  </footer>
+  <!-- Important JS (which provide global objects)- check below too -->
+  <script src="https://cdn-static.screener.in/js/utils.0147599e8f13.js">
+  </script>
+  <script src="https://cdn-static.screener.in/js/modal.ccacae1a5594.js">
+  </script>
+  <script src="https://cdn-static.screener.in/js/typeahead.8dcc9ac93685.js">
+  </script>
+  <script src="https://cdn-static.screener.in/js/filter.component.48935d3ab300.js">
+  </script>
+  <!-- Independent JS scripts for page interactions -->
+  <script src="https://cdn-static.screener.in/js/navbar.3fe7f0f4a630.js">
+  </script>
+  <script src="https://cdn-static.screener.in/js/company.search.e48f94642999.js">
+  </script>
+  <script>
+   plausible("Buy Premium Page", {props: {driver: "top-nav-tools"}})
+  </script>
+  <!-- Service worker installer for PWA -->
+  <script src="https://cdn-static.screener.in/js/pwa.6ade38a669c4.js">
+  </script>
+ </body>
+</html>
+

@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Screener AI
+ - Screener
+  </title>
+  <!-- plausible -->
+  <script data-domain="screener.in" defer="" event-user="unregistered" src="https://plausible.screener.in/js/script.pageview-props.tagged-events.js">
+  </script>
+  <script>
+   window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments) }
+  </script>
+  <script data-site-id="5494427e1dc0" defer="" src="https://rybbit.screener.in/api/script.js">
+  </script>
+  <!-- FONT -->
+  <link href="https://cdn-static.screener.in/inter/inter.c622a5e75782.css" rel="stylesheet"/>
+  <link href="https://cdn-static.screener.in/fontello/css/fontello.1d1b3a0a264b.css?v=3" rel="stylesheet"/>
+  <!-- CSS -->
+  <link href="https://cdn-static.screener.in/css/normalize.a2444750a947.css" media="all" rel="stylesheet"/>
+  <link href="https://cdn-static.screener.in/css/skeleton.c6872bc14f71.css" media="all" rel="stylesheet"/>
+  <link href="https://cdn-static.screener.in/css/custom.c544852bd75a.css" media="all" rel="stylesheet"/>
+  <link href="https://cdn-static.screener.in/css/ai-landing.92ce450b2bfe.css" rel="stylesheet"/>
+  <meta content="Mittal Analytics Private Limited" name="author"/>
+  <!-- PWA manifest -->
+  <meta content="#fff" media="(prefers-color-scheme: light)" name="theme-color"/>
+  <meta content="#222530" media="(prefers-color-scheme: dark)" name="theme-color"/>
+  <link href="/static/manifest.json" rel="manifest"/>
+  <!-- favicons -->
+  <link href="https://cdn-static.screener.in/favicon/apple-touch-icon.b6e5f24bf7d3.png" rel="apple-touch-icon" sizes="180x180"/>
+  <link href="https://cdn-static.screener.in/favicon/favicon-32x32.00205914303a.png" rel="icon" sizes="32x32" type="image/png"/>
+  <link href="https://cdn-static.screener.in/favicon/favicon-16x16.2b35594b2f33.png" rel="icon" sizes="16x16" type="image/png"/>
+  <link color="#8ED443" href="https://cdn-static.screener.in/favicon/safari-pinned-tab.adbe3ed3c5ad.svg" rel="mask-icon"/>
+  <meta content="#da532c" name="msapplication-TileColor"/>
+ </head>
+ <body class="light flex-column">
+  <nav class="u-full-width no-print">
+   <div id="mobile-search">
+    <div class="has-addon left-addon dropdown-typeahead">
+     <i class="addon icon-search">
+     </i>
+     <input aria-label="Search for a company" autocomplete="off" class="u-full-width" data-company-search="true" placeholder="Search for a company" spellcheck="false" type="search"/>
+    </div>
+   </div>
+   <ul class="bottom-menu-bar hide-from-tablet-landscape">
+    <li class="">
+     <a href="/">
+      <i class="icon-home">
+      </i>
+      <br/>
+      Home
+     </a>
+    </li>
+    <li class="">
+     <a href="/explore/">
+      <i class="icon-screens">
+      </i>
+      <br/>
+      Screens
+     </a>
+    </li>
+    <li>
+     <button class="round height-48 button-primary" onclick="MobileMenu.toggleSearch(this)" title="Search" type="button">
+      <i class="icon-search" style="font-size: 18px">
+      </i>
+     </button>
+    </li>
+    <li>
+     <button class="button-plain" onclick="Modal.showInModal('#nav-tools-menu')">
+      <i class="icon-tools">
+      </i>
+      <br/>
+      Tools
+     </button>
+    </li>
+    <li class="">
+     <a href="/register/?">
+      <i class="icon-user-plus">
+      </i>
+      <br/>
+      Login
+     </a>
+    </li>
+   </ul>
+   <div class="top-nav-holder">
+    <div class="container">
+     <div class="layer-holder top-navigation">
+      <div class="layer flex flex-space-between" style="align-items: center;
+              height: 50px">
+       <div class="flex" style="align-items: center">
+        <a class="logo-holder" href="/">
+         <img alt="Screener Logo" class="logo" src="https://cdn-static.screener.in/img/logo-black.f44abb4998d1.svg"/>
+        </a>
+        <div class="desktop-links" style="margin-left: 48px">
+         <a href="/">
+          Home
+         </a>
+         <a href="/explore/">
+          Screens
+         </a>
+         <div class="dropdown-menu">
+          <button class="button-plain" onclick="Utils.toggleDropdown(event)" type="button">
+           Tools
+           <i class="icon-down">
+           </i>
+          </button>
+          <ul class="dropdown-content flex-column tools-menu" id="nav-tools-menu" style="width: 350px">
+           <li>
+            <a class="flex flex-align-center flex-gap-16" href="/screen/new/">
+             <div class="bg-stripes square height-56">
+              <img alt="Create a stock screen" src="https://cdn-static.screener.in/icons/screens.e960a5daedf9.svg"/>
+             </div>
+             <div>
+              <div class="font-weight-500 font-size-14">
+               Create a stock screen
+              </div>
+              <div class="sub font-size-13">
+               Run queries on 10 years of financial data
+              </div>
+             </div>
+            </a>
+           </li>
+           <li class="flex flex-align-center no-hover" style="padding: 4px 0;">
+            <div class="button button-primary premium-indicator flex flex-align-center">
+             <img alt="Premium icon" src="https://cdn-static.screener.in/icons/crown.fb0d2413ee43.svg" style="margin-right: 8px"/>
+             <span>
+              Premium features
+             </span>
+            </div>
+            <hr class="flex-grow" style="padding: 0; margin: 0;"/>
+           </li>
+           <li>
+            <a class="flex flex-align-center flex-gap-16" href="/ai/">
+             <div class="bg-stripes square height-56">
+              <img alt="Screener AI" src="https://cdn-static.screener.in/icons/ai.970ef1d1cabb.svg"/>
+             </div>
+             <div>
+              <div class="font-weight-500 font-size-14">
+               Screener AI
+              </div>
+              <div class="sub font-size-13">
+               Extract valuable insights from hundreds of company documents.
+              </div>
+             </div>
+            </a>
+           </li>
+           <li>
+            <a class="flex flex-align-center flex-gap-16" href="/hs/">
+             <div class="bg-stripes square height-56">
+              <img alt="Commodity Prices" src="https://cdn-static.screener.in/icons/export.d623f0029933.svg"/>
+             </div>
+             <div>
+              <div class="font-weight-500 font-size-14">
+               Commodity Prices
+              </div>
+              <div class="sub font-size-13">
+               Analyze price trends for 10,000+ commodities over the past 10 years.
+              </div>
+             </div>
+            </a>
+           </li>
+           <li>
+            <a class="flex flex-align-center flex-gap-16" href="/people/">
+             <div class="bg-stripes square height-56">
+              <img alt="Search shareholders by name" src="https://cdn-static.screener.in/icons/shares.10acc20cb936.svg"/>
+             </div>
+             <div>
+              <div class="font-weight-500 font-size-14">
+               Search shareholders
+              </div>
+              <div class="sub font-size-13">
+               Find all companies where a person owns more than 1% of shares.
+              </div>
+             </div>
+            </a>
+           </li>
+           <li>
+            <a class="flex flex-align-center flex-gap-16" href="/announcements/">
+             <div class="bg-stripes square height-56">
+              <img alt="Loudspeaker" src="https://cdn-static.screener.in/icons/loudspeaker.88769927f6eb.svg"/>
+             </div>
+             <div>
+              <div class="font-weight-500 font-size-14">
+               Company Announcements
+              </div>
+              <div class="sub font-size-13">
+               Stay updated. Search, filter and set alerts for the newest disclosures and developments.
+              </div>
+             </div>
+            </a>
+           </li>
+           <li style="padding: 16px;">
+            <a class="button button-primary text-align-center" href="/premium/?driver=top-nav-tools" style="color: var(--white);
+                          padding: 10px 24px">
+             Upgrade to premium
+            </a>
+           </li>
+          </ul>
+         </div>
+        </div>
+       </div>
+       <div class="show-from-tablet-landscape flex flex-gap-16" style="justify-content: flex-end;
+                flex: 1 1 400px">
+        <div class="search" id="desktop-search">
+         <div class="has-addon left-addon dropdown-typeahead">
+          <i class="addon icon-search">
+          </i>
+          <input aria-label="Search for a company" autocomplete="off" class="u-full-width" data-company-search="true" placeholder="Search for a company" spellcheck="false" type="search"/>
+         </div>
+        </div>
+        <div class="flex flex-gap-8" style="margin: 4px">
+         <a class="button account" href="/login/?">
+          <i class="icon-user-line blue-icon">
+          </i>
+          Login
+         </a>
+         <a class="button account button-secondary" href="/register/?">
+          Get free account
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </nav>
+  <main class="flex-grow container">
+   <div class="breadcrumb hidden-if-empty">
+   </div>
+   <div class="flex-column flex-align-center gap-96 isolate">
+    <div class="bg-blur">
+    </div>
+    <!-- above the fold -->
+    <div class="flex-column gap-48 flex-align-center position-relative">
+     <div class="flex-column flex-align-center text-align-center max-width-620">
+      <h1 class="margin-bottom-0 margin-top-32 strong">
+       Empower your Research.
+       <br/>
+       Ask
+       <span style="color:var(--link);">
+        Screener AI
+       </span>
+       .
+      </h1>
+      <p class="margin-top-16 margin-bottom-0 font-size-18 ink-900">
+       <strong>
+        Screener AI
+       </strong>
+       has direct access to company filings such as annual reports and earning calls. Just ask and get professional-grade insights in seconds.
+      </p>
+      <div class="flex gap-8 margin-top-32">
+       <button class="button-primary button-large plausible-event-name=AI+Try+Now" data-is-bottom-modal="true" data-title="Reliance Industries Ltd" data-url="/ai/company/2726/" onclick="Modal.openInModal(event)" type="button">
+        <i class="icon-chat-ai">
+        </i>
+        Try Now
+       </button>
+       <a class="button button-large button-secondary icon-flash" href="/payment/ai/">
+        Topup
+       </a>
+      </div>
+     </div>
+     <div class="margin-top-48 u-full-width position-relative">
+      <button aria-label="Play Screener AI introduction video" class="a u-full-width" onclick="playAiVideo(this)" style="background:var(--body-bg)">
+       <img alt="Screenshot Screener AI" src="https://cdn-static.screener.in/img/ai/ai-video.780622021e3d.png"/>
+      </button>
+      <div class="video-container" id="ai-video-embed" style="display:none;
+                    position:absolute;
+                    top:9px;
+                    left:9px;
+                    right:9px">
+       <!-- iframe will be injected by JS -->
+      </div>
+     </div>
+    </div>
+    <!-- how it works -->
+    <div class="flex-column flex-center gap-48">
+     <div class="max-width-620 text-align-center">
+      <h2>
+       How it works
+      </h2>
+      <p class="sub margin-0">
+       Screener AI integrates the best AI models. It gives them structured access to the official documents of the companies.
+      </p>
+     </div>
+     <div class="flex-row padding-16 gap-12 border-radius-28 bg-light-blue">
+      <div class="flex-column gap-32 bg-base flex-grow padding-16 border-radius-12" style="flex-basis:200px">
+       <div class="fill-padding-16">
+        <img alt="Automatic document uploads" src="https://cdn-static.screener.in/img/ai/no-uploads.07aff770d1a8.png"/>
+       </div>
+       <div>
+        <p class="font-size-20 font-weight-500 margin-0">
+         No uploads
+        </p>
+        <p class="ink-600 margin-0">
+         We auto-upload the relevant documents.
+        </p>
+       </div>
+      </div>
+      <div class="flex-column gap-32 bg-base flex-grow padding-16 border-radius-12" style="flex-basis:200px">
+       <div class="fill-padding-16">
+        <img alt="Ask in plain English" src="https://cdn-static.screener.in/img/ai/no-prompts.e1d23e96932f.png"/>
+       </div>
+       <div>
+        <p class="font-size-20 font-weight-500 margin-0">
+         No prompt engineering
+        </p>
+        <p class="ink-600 margin-0">
+         Just ask in plain English.
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+    <!-- answers across documents -->
+    <div class="flex-row flex-align-center gap-m32-80">
+     <div class="flex-grow" style="flex-basis:300px">
+      <p class="h3">
+       The assistant you wanted
+      </p>
+      <p class="sub">
+       Screener AI reads through the documents intelligently and sincerely. It extracts the key insights and finds answers you are looking for.
+      </p>
+     </div>
+     <div class="flex-grow" style="flex-basis:300px">
+      <img alt="Chat flow visualization with Screener AI" class="shadow-image" src="https://cdn-static.screener.in/img/ai/chat-flow.368e5fa39d5b.png"/>
+     </div>
+    </div>
+    <!-- Hours of research -->
+    <div class="flex-row flex-align-center gap-m32-80" style="flex-wrap:wrap-reverse">
+     <div class="flex-grow" style="flex-basis:300px;">
+      <img alt="Research cycle illustration" class="shadow-image" src="https://cdn-static.screener.in/img/ai/read-cycle.802b350f4484.png"/>
+     </div>
+     <div class="flex-grow" style="flex-basis:300px;">
+      <p class="h3">
+       Hours of research, done in seconds.
+      </p>
+      <p class="sub">
+       Cut down the time taken to understand a company. Use the assistant to fetch details while you do the thinking.
+      </p>
+     </div>
+    </div>
+    <!-- better than the rest -->
+    <div class="fill-container bg-dark-gradient flex-column flex-center gap-32">
+     <div class="flex flex-column gap-16 text-align-center white max-width-620">
+      <h2>
+       Better than the rest
+      </h2>
+      <p class="opacity-67 margin-0">
+       Screener AI has direct access to the company documents. This provides quicker, cheaper and more relevant answers.
+      </p>
+     </div>
+     <div class="fixed-width-table-holder">
+      <div style="position:relative; width:fit-content;">
+       <div class="column-highlight">
+       </div>
+       <table class="fixed-width-table">
+        <thead>
+         <tr>
+          <th style="border:none;">
+          </th>
+          <th>
+           <img alt="OpenAI Logo" src="https://cdn-static.screener.in/img/openai.b7504fea7d78.png" style="width:100px"/>
+          </th>
+          <th>
+           <img alt="Perplexity Logo" src="https://cdn-static.screener.in/img/perplexity.170d544838f1.svg"/>
+          </th>
+          <th>
+           <img alt="Gemini Logo" src="https://cdn-static.screener.in/img/gemini.c6bf0e614834.png" style="width:88px;
+                              height:auto"/>
+          </th>
+          <th>
+           <img alt="Screener AI Logo" src="https://cdn-static.screener.in/img/logo-white.66821a39000d.svg"/>
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td>
+           Monthly Price
+          </td>
+          <td>
+           $200
+          </td>
+          <td>
+           $20
+          </td>
+          <td>
+           $20
+          </td>
+          <td>
+           Pay-as-you-use
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Direct access to company documents?
+          </td>
+          <td>
+           <img alt="No direct document access" src="https://cdn-static.screener.in/img/cross.34f7475453c8.svg"/>
+          </td>
+          <td>
+           <img alt="No direct document access" src="https://cdn-static.screener.in/img/cross.34f7475453c8.svg"/>
+          </td>
+          <td>
+           <img alt="No direct document access" src="https://cdn-static.screener.in/img/cross.34f7475453c8.svg"/>
+          </td>
+          <td>
+           <img alt="Direct document access enabled" src="https://cdn-static.screener.in/img/tick.17b1e1f37ecb.svg"/>
+          </td>
+         </tr>
+         <tr class="warn">
+          <td>
+           Prompt Engineering
+          </td>
+          <td class="warn icon-info">
+           Needs Setup
+          </td>
+          <td class="warn icon-info">
+           Needs Setup
+          </td>
+          <td class="warn icon-info">
+           Needs Setup
+          </td>
+          <td class="flex flex-center gap-8">
+           <img alt="No setup needed" src="https://cdn-static.screener.in/img/tick.17b1e1f37ecb.svg"/>
+           Just Works!
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+     </div>
+    </div>
+    <!-- FAQs -->
+    <div class="flex-column u-full-width">
+     <h2 class="text-align-center">
+      FAQs
+     </h2>
+     <div class="u-full-width" id="faq-accordion">
+      <details class="flex flex-column padding-20-0 border-bottom" open="">
+       <summary class="ink-900 flex flex-row flex-align-center flex-space-between gap-8 flex-nowrap text-wrap-balance">
+        What is Screener AI? How useful is it?
+        <img alt="Dropdown arrow" src="https://cdn-static.screener.in/img/dropdown.f758902e072d.svg"/>
+       </summary>
+       <p class="ink-700 margin-bottom-0">
+        Screener AI is the assistant you always wanted. It is hard-working, sincere, and very intelligent. You ask it a question, and it reads through documents to answer your query. We use it a lot to co-work on an investment idea. Sometimes we ask it to compile data from the documents, while other times we ask it to explain things to us in simple language. It can help you understand the companies better. It is pretty useful.
+       </p>
+      </details>
+      <details class="flex flex-column padding-20-0 border-bottom">
+       <summary class="ink-900 flex flex-row flex-align-center flex-space-between gap-8 flex-nowrap text-wrap-balance">
+        How is Screener AI different from other AI tools?
+        <img alt="Dropdown arrow" src="https://cdn-static.screener.in/img/dropdown.f758902e072d.svg"/>
+       </summary>
+       <p class="ink-700 margin-bottom-0">
+        All other tools, including ChatGPT Pro and Perplexity, use search engines to find relevant documents. They often miss a lot of relevant documents in this approach. This is more error-prone, costly, and time-consuming.
+        <br/>
+        <br/>
+        Screener AI has direct access to the official filings of the companies. Plus, we have innovated lots of new technologies that improve the understanding of the official documents. This gives much better results – almost like an expert.
+       </p>
+      </details>
+      <details class="flex flex-column padding-20-0 border-bottom">
+       <summary class="ink-900 flex flex-row flex-align-center flex-space-between gap-8 flex-nowrap text-wrap-balance">
+        Is Screener AI paid? What is the pricing?
+        <img alt="Dropdown arrow" src="https://cdn-static.screener.in/img/dropdown.f758902e072d.svg"/>
+       </summary>
+       <p class="ink-700 margin-bottom-0">
+        Yes, Screener AI is paid because of the underlying cost per token. You can do a top-up to use Screener AI for the amount you want. You can also purchase
+        <a href="/premium/?driver=ai-faq">
+         Screener Premium
+        </a>
+        to get free AI Credits worth ₹500.
+       </p>
+      </details>
+      <details class="flex flex-column padding-20-0 border-bottom">
+       <summary class="ink-900 flex flex-row flex-align-center flex-space-between gap-8 flex-nowrap text-wrap-balance">
+        How much does each answer cost?
+        <img alt="Dropdown arrow" src="https://cdn-static.screener.in/img/dropdown.f758902e072d.svg"/>
+       </summary>
+       <p class="ink-700 margin-bottom-0">
+        Average cost comes to around ₹10-30 per answer. The cost depends on the number of documents AI reads. It can even go up to ₹100 if the AI reads a lot of documents. At the raw level, it is ₹100 per million input tokens and ₹800 per million output tokens.
+       </p>
+      </details>
+      <details class="flex flex-column padding-20-0 border-bottom">
+       <summary class="ink-900 flex flex-row flex-align-center flex-space-between gap-8 flex-nowrap text-wrap-balance">
+        How can I reduce the costs?
+        <img alt="Dropdown arrow" src="https://cdn-static.screener.in/img/dropdown.f758902e072d.svg"/>
+       </summary>
+       <p class="ink-700 margin-bottom-0">
+        We understand that the costs of answers are quite high sometimes. This is because of the high-intelligence models we use. You can switch to the "General Intelligence" mode for much lower costs. We are also constantly working on new ways to reduce this cost. Give us some time.
+       </p>
+      </details>
+      <details class="flex flex-column padding-20-0 border-bottom">
+       <summary class="ink-900 flex flex-row flex-align-center flex-space-between gap-8 flex-nowrap text-wrap-balance">
+        How good is it?
+        <img alt="Dropdown arrow" src="https://cdn-static.screener.in/img/dropdown.f758902e072d.svg"/>
+       </summary>
+       <p class="ink-700 margin-bottom-0">
+        We have been using Screener AI internally for 2 months before launching. We love the answers it gives. It understands our queries and gives insights which help us make better decisions. It is pretty good. Try it!
+       </p>
+      </details>
+      <details class="flex flex-column padding-20-0 border-bottom">
+       <summary class="ink-900 flex flex-row flex-align-center flex-space-between gap-8 flex-nowrap text-wrap-balance">
+        How do I use Screener AI?
+        <img alt="Dropdown arrow" src="https://cdn-static.screener.in/img/dropdown.f758902e072d.svg"/>
+       </summary>
+       <p class="ink-700 margin-bottom-0">
+        Screener AI is currently available on the company pages. Open any company, click on the AI button at the top. It will open a chat window where you can ask your queries about the company.
+       </p>
+      </details>
+     </div>
+    </div>
+    <!-- Screener Premium -->
+    <div class="position-relative bg-dark-gradient border-radius-12 drop-shadow-ai u-full-width white" style="padding:88px 16px;
+                overflow:hidden">
+     <div class="ellipse ellipse-1">
+     </div>
+     <div class="ellipse ellipse-2">
+     </div>
+     <div class="flex flex-center">
+      <div class="text-align-center max-width-620">
+       <p class="h2 font-weight-500">
+        Free credits worth ₹500
+       </p>
+       <p class="font-size-16 opacity-67">
+        You can do a top-up of the amount you want. Alternatively, you can upgrade to Screener Premium and get ₹500 AI Credits free.
+       </p>
+       <a class="button button-primary button-large margin-top-32" href="/premium/?driver=ai-free-credits">
+        <span class="icon-crown">
+        </span>
+        Get Premium
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </main>
+  <footer id="large-footer">
+   <div class="flex-row flex-space-between flex-column-tablet container no-print">
+    <div class="hide-from-tablet" style="margin-bottom: 16px;">
+     <img alt="Screener Logo" class="logo" src="https://cdn-static.screener.in/img/logo-black.f44abb4998d1.svg" style="max-width: 120px"/>
+    </div>
+    <div class="show-from-tablet" style="padding: 0 64px 0 0;">
+     <img alt="Screener Logo" class="logo" src="https://cdn-static.screener.in/img/logo-black.f44abb4998d1.svg" style="max-width: 120px"/>
+     <p class="font-size-19" style="font-weight: 500;">
+      Stock analysis and screening tool
+     </p>
+     <p class="sub">
+      Mittal Analytics Private Ltd © 2009-2026
+      <br/>
+      Made with
+      <i class="icon-heart red">
+      </i>
+      in India.
+     </p>
+     <p class="sub font-size-13">
+      Data provided by C-MOTS Internet Technologies Pvt Ltd
+     </p>
+     <p class="font-size-13 sub">
+      <a class="underline-link" href="/guides/terms/">
+       Terms
+      </a>
+      &amp;
+      <a class="underline-link" href="/guides/privacy/">
+       Privacy
+      </a>
+      .
+     </p>
+    </div>
+    <div class="flex flex-end flex-space-between flex-grow" style="max-width: 600px">
+     <div class="flex-grow">
+      <div class="title">
+       Product
+      </div>
+      <ul class="items">
+       <li>
+        <a href="/premium/?driver=footer">
+         Premium
+        </a>
+       </li>
+       <li>
+        <a href="/docs/changelog/">
+         What's new?
+        </a>
+       </li>
+       <li>
+        <a href="https://bit.ly/learnscreener">
+         Learn
+        </a>
+       </li>
+       <li>
+        <button class="a2hs button-secondary button-small">
+         <i class="icon-flash">
+         </i>
+         Install
+        </button>
+       </li>
+      </ul>
+     </div>
+     <div class="flex-grow">
+      <div class="title">
+       Team
+      </div>
+      <ul class="items">
+       <li>
+        <a href="/guides/about-us/">
+         About us
+        </a>
+       </li>
+       <li>
+        <a href="/support/">
+         Support
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div class="flex-grow">
+      <div class="title">
+       Theme
+      </div>
+      <ul class="items">
+       <li>
+        <button aria-label="Set light theme" class="button-plain" onclick="SetTheme('light')">
+         <i class="icon-sun">
+         </i>
+         Light
+        </button>
+       </li>
+       <li>
+        <button aria-label="Set dark theme" class="button-plain" onclick="SetTheme('dark')">
+         <i class="icon-moon">
+         </i>
+         Dark
+        </button>
+       </li>
+       <li>
+        <button aria-label="Set auto theme" class="button-plain" onclick="SetTheme('auto')">
+         <i class="icon-monitor">
+         </i>
+         Auto
+        </button>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="hide-from-tablet">
+     <hr/>
+     <p class="sub">
+      Mittal Analytics Private Ltd © 2009-2026
+     </p>
+     <p class="sub">
+      Data provided by C-MOTS Internet Technologies Pvt Ltd
+     </p>
+     <p class="sub">
+      <a class="underline-link" href="/guides/terms/">
+       Terms
+      </a>
+      &amp;
+      <a class="underline-link" href="/guides/privacy/">
+       Privacy
+      </a>
+      .
+     </p>
+    </div>
+   </div>
+  </footer>
+  <!-- Important JS (which provide global objects)- check below too -->
+  <script src="https://cdn-static.screener.in/js/utils.0147599e8f13.js">
+  </script>
+  <script src="https://cdn-static.screener.in/js/modal.ccacae1a5594.js">
+  </script>
+  <script src="https://cdn-static.screener.in/js/typeahead.8dcc9ac93685.js">
+  </script>
+  <script src="https://cdn-static.screener.in/js/filter.component.48935d3ab300.js">
+  </script>
+  <!-- Independent JS scripts for page interactions -->
+  <script src="https://cdn-static.screener.in/js/navbar.3fe7f0f4a630.js">
+  </script>
+  <script src="https://cdn-static.screener.in/js/company.search.e48f94642999.js">
+  </script>
+  <script>
+   function playAiVideo(button) {
+    button.disabled = true;
+    const container = button.parentNode;
+    const embedDiv = container.querySelector('#ai-video-embed');
+    // Insert YouTube embed
+    embedDiv.innerHTML =
+      '<iframe src="https://www.youtube.com/embed/YB2nKMy6ukg?autoplay=1&controls=1&showinfo=0&rel=0&modestbranding=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width:100%;height:100%;border:0;"></iframe>';
+    embedDiv.style.display = "block";
+  }
+  </script>
+  <!-- Service worker installer for PWA -->
+  <script src="https://cdn-static.screener.in/js/pwa.6ade38a669c4.js">
+  </script>
+ </body>
+</html>
+
