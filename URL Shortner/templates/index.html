@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="main">
+    <form method="POST">
+    {{form.hidden_tag()}}
+    {{form.url.label}} {{form.url}}
+    {{form.submit()}}
+
+    </form>
+    {%if link%}
+    <p>Shortened URL: <a href="{{link}}">{{link}}</a></p>
+    {%endif%}
+    </div>
+</body>
+</html>
